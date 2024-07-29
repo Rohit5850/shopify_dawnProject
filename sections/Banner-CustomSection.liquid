@@ -1,14 +1,31 @@
 <div class="custom-banner-section page-width">
 
-  <div>
-    <img src={{  }}  alt="img_1"/>
+  <div class="banner_section_content">
+    <div class="image_cstmBanner">
+      {% if section.settings.bannerImg != blank %}
+    <img src={{ section.settings.bannerImg | image_url }}  alt="img_1"/>
+        {% endif %}
+      {% if section.settings.bgBannerImg  != blank %}
+      <div class="bg_customBanner">
+        <img src={{ section.settings.bgBannerImg }}  alt="img_2"/>
+      </div>
+        {% endif %}
+    </div>
 
     <div class="text-section">
-      <p>Supplying your child with the prettiest, coziest clothes possible at the most affordable prices.</p>
+      {% if section.settings.bannerText != blank %}
+      <p>{{ section.settings.bannerText }}</p>
+        {% endif %}
+      {% if section.settings.btnText1 != blank %}
       <div class="banner_btn">
-        <a href=""><button>2023 Collection</button></a>
-        <a href=""><button>Shop Now {% render 'btn_icon.svg' %} </button></a>
+        {% if section.settings.btnUrl1 != blank %}
+        <a href="{{ section.settings.btnUrl1 }}"><button>{{ section.settings.btnText1 }}</button></a>
+          {% endif %}
+         {% if section.settings.btnUrl2 != blank %}
+        <a href="{{ section.settings.btnUrl2 }}"><button>{{ section.settings.btnText2 }} <span>{% render 'btn_icon.svg' %}</span> </button></a>
+        {% endif %}
       </div>
+        {% endif %}
     </div>
   </div>
   
@@ -23,17 +40,47 @@
   "class": "cstm_banner",
   "settings": [
     {
+      "type": "image_picker",
+      "id": "bannerImg",
+      "label": "Banner Image"
+    },
+     {
+      "type": "image_picker",
+      "id": "bgBannerImg",
+      "label": "Background Banner Image"
+    },
+    {
       "type": "text",
-      "id": "title",
-      "label": "Slideshow"
+      "id":"bannerText",
+      "label": "Text"
+    },
+    {
+      "type": "url",
+      "id": "btnUrl1",
+      "label": "Button Url 1"
+    },
+     {
+      "type": "text",
+      "id":"btnText1",
+      "label": "Button Lablel 1"
+    },
+     {
+      "type": "url",
+      "id": "btnUrl2",
+      "label": "Button Url 2"
+    },
+     {
+      "type": "text",
+      "id":"btnText2",
+      "label": "Button Lablel 2"
     }
+    
   ]
 ,
   "presets": [
     {
       "name": "Custom Banner Section",
       "settings": {
-        "title": "Slideshow"
       }
     }
   ]
