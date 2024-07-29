@@ -1,6 +1,4 @@
-{% capture svg_content %}
-  {% include 'btn_icon.svg' %}
-{% endcapture %}
+
 
 <div class="custom-banner-section page-width">
 
@@ -26,7 +24,11 @@
         <a href="{{ section.settings.btnUrl1 }}"><button>{{ section.settings.btnText1 }}</button></a>
           {% endif %}
          {% if section.settings.btnUrl2 != blank %}
-        <a href="{{ section.settings.btnUrl2 }}"><button>{{ section.settings.btnText2 }} <span>{% include '' %} {{ svg_content | strip_newlines }}</span> </button></a>
+           {% capture svg_content %}
+  {% include 'btn_icon.svg' %}
+{% endcapture %}
+           <button>{{ svg_content | strip_newlines }}</button>
+        <a href="{{ section.settings.btnUrl2 }}"><button>{{ section.settings.btnText2 }} <span></span> </button></a>
         {% endif %}
       </div>
         {% endif %}
