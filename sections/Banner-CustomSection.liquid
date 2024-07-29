@@ -24,11 +24,7 @@
         <a href="{{ section.settings.btnUrl1 }}"><button>{{ section.settings.btnText1 }}</button></a>
           {% endif %}
          {% if section.settings.btnUrl2 != blank %}
-           {% capture svg_content %}
-  {% include 'btn_icon.svg' %}
-{% endcapture %}
-           <button>{{ svg_content | strip_newlines }}</button>
-        <a href="{{ section.settings.btnUrl2 }}"><button>{{ section.settings.btnText2 }} <span></span> </button></a>
+        <a href="{{ section.settings.btnUrl2 }}"><button>{{ section.settings.btnText2 }} <span> <img src="https://cdn.shopify.com/s/files/1/0606/2433/9075/files/icon_8.png?v=1722276815"  alt="img_icon_1"/></span> </button></a>
         {% endif %}
       </div>
         {% endif %}
