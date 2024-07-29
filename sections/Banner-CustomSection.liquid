@@ -17,8 +17,26 @@
 
 
 {% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
+{
+  "name": "Custom Banner Section",
+  "tag": "section",
+  "class": "cstm_banner",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Slideshow"
+    }
+  ]
+,
+  "presets": [
+    {
+      "name": "Custom Banner Section",
+      "settings": {
+        "title": "Slideshow"
+      }
+    }
+  ]
+
+}
 {% endschema %}
