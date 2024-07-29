@@ -22,7 +22,7 @@
         <a href="{{ section.settings.btnUrl1 }}"><button>{{ section.settings.btnText1 }}</button></a>
           {% endif %}
          {% if section.settings.btnUrl2 != blank %}
-        <a href="{{ section.settings.btnUrl2 }}"><button>{{ section.settings.btnText2 }} <span>{% include 'btn_icon.svg' %}</span> </button></a>
+        <a href="{{ section.settings.btnUrl2 }}"><button>{{ section.settings.btnText2 }} <span>{% capture svg_content %}  {% include 'btn_icon.svg' %} {% endcapture %}</span> </button></a>
         {% endif %}
       </div>
         {% endif %}
