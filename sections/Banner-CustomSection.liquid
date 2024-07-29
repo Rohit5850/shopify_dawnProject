@@ -24,7 +24,7 @@
         <a href="{{ section.settings.btnUrl1 }}"><button class="cstn_btn_primery">{{ section.settings.btnText1 }}</button></a>
           {% endif %}
          {% if section.settings.btnUrl2 != blank %}
-        <a href="{{ section.settings.btnUrl2 }}"><button class="cstn_btn_primery">{{ section.settings.btnText2 }} </button></a>
+        <a href="{{ section.settings.btnUrl2 }}"><button class="cstn_btn_secondary">{{ section.settings.btnText2 }} </button></a>
         {% endif %}
       </div>
         {% endif %}
@@ -67,6 +67,31 @@
     object-fit: contain;
     line-height: 0;
     bottom: 0;
+}
+  .banner_btn {
+    display: flex;
+    gap: 10px;
+}
+  .cstn_btn_primery {
+    /* max-width: 160px; */
+    min-width: 160px;
+    min-height: 48px;
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 12px;
+    color: white;
+    cursor: pointer;
+}
+  .cstn_btn_secondary {
+    min-width: 140px;
+    min-height: 48px;
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 12px;
+    color: white;
+    cursor: pointer;
+    background: gray;
+    border: 0;
 }
   
 </style>
