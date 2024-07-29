@@ -3,11 +3,11 @@
   <div class="banner_section_content">
     <div class="image_cstmBanner">
       {% if section.settings.bannerImg != blank %}
-    <img src={{ section.settings.bannerImg | image_url }}  alt="img_1"/>
+    <img src={{ section.settings.bannerImg | img_url: 'master' }}  alt="img_1"/>
         {% endif %}
       {% if section.settings.bgBannerImg  != blank %}
       <div class="bg_customBanner">
-        <img src={{ section.settings.bgBannerImg }}  alt="img_2"/>
+        <img src={{ section.settings.bgBannerImg | img_url: 'master' }}  alt="img_2"/>
       </div>
         {% endif %}
     </div>
