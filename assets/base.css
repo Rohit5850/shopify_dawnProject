@@ -3597,8 +3597,11 @@ img {
     text-decoration: none;
 }
 
-.product-grid .card__content .card__information {
+.collection .product-grid .card__content .card__information {
     padding: 0;
     padding-top: 5px;
+}
+.collection .product-grid .card__content .price  {
+   display:none;
 }
 
